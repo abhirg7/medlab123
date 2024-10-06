@@ -1,0 +1,99 @@
+{
+"get-pincode-details": [
+        {
+            "isAvailable": true,
+            "pincode": 413517,
+            "packageDetails": [
+                {
+                    "packageName": "Medicine Pack",
+                    "packageId": "457117a029f0e511aa80002219349965",
+                    "providers": [
+                        {
+                            "name": "PharmEasy",
+                            "dcid": "72326aaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                            "isStorePickup": false,
+                            "courierInfo": {
+                                "discount": "20",
+                                "deliveryTime": "4",
+                                "pincode": "413517"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "pincodeCity": "Latur",
+            "statusCode": "NonAuthoritativeInformation",
+            "id": "240a"
+        },
+        {
+            "isAvailable": true,
+            "pincode": 411046,
+            "packageDetails": [
+                {
+                    "packageName": "Medicine Pack",
+                    "packageId": "457117a029f0e511aa80002219349965",
+                    "providers": [
+                        {
+                            "name": "PharmEasy",
+                            "dcid": "72326aaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                            "isStorePickup": false,
+                            "courierInfo": {
+                                "discount": "20",
+                                "deliveryTime": "4",
+                                "pincode": "411046"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "pincodeCity": "Pune",
+            "statusCode": "NonAuthoritativeInformation",
+            "id": "1adf"
+        },
+        {
+            "isAvailable": true,
+            "pincode": 560030,
+            "packageDetails": [
+                {
+                    "packageName": "Medicine Pack",
+                    "packageId": "457117a029f0e511aa80002219349965",
+                    "providers": [
+                        {
+                            "name": "PharmEasy",
+                            "dcid": "72326aaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                            "isStorePickup": false,
+                            "courierInfo": {
+                                "discount": "20",
+                                "deliveryTime": "4",
+                                "pincode": "560030"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "pincodeCity": "Banglore",
+            "statusCode": "NonAuthoritativeInformation",
+            "id": "c51f"
+        },
+        {
+            "isAvailable": true,
+            "pincode": 600005,
+            "packageDetails": [
+                {
+                    "packageName": "Apollo Pharmacy Package",
+                    "packageId": "457117a029f0e511aa80002219349965",
+                    "providers": [
+                        {
+                            "name": "Apollo",
+                            "dcid": "199600aaaaaaaaaaaaaaaaaaaaaaaaaa",
+                            "isStorePickup": true
+                        }
+                    ]
+                }
+            ],
+            "pincodeCity": "Chennai",
+            "statusCode": "NonAuthoritativeInformation",
+            "id": "46dd"
+        }
+    ]
+}
