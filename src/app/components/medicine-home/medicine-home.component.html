@@ -1,38 +1,98 @@
 <div class="container-fluid py-4 text-center bg-primary text-light">
     <h3>Get Huge Savings on Medicines</h3>
     <div class="d-flex justify-content-center">
-        <div class="p-2"><i class="bi bi-check-circle mx-2"></i>100 % Genuine Medicines</div>
-        <div class="p-2"><i class="bi bi-check-circle mx-2"></i>Trusted Pharmacies</div>
-        <div class="p-2"><i class="bi bi-check-circle mx-2"></i>Delivery to your doorstep</div>
-        <div class="p-2"><i class="bi bi-check-circle mx-2"></i>Store Pick up</div>
+      <div class="p-2"><i class="bi bi-check-circle mx-2"></i>100 % Genuine Medicines</div>
+      <div class="p-2"><i class="bi bi-check-circle mx-2"></i>Trusted Pharmacies</div>
+      <div class="p-2"><i class="bi bi-check-circle mx-2"></i>Delivery to your doorstep</div>
+      <div class="p-2"><i class="bi bi-check-circle mx-2"></i>Store Pick up</div>
     </div>
-</div>
-
-
-<div class="container w-50 m-auto shadow">
+  </div>
+  
+  <div class="container w-50 m-auto shadow position-relative"> <!-- Added position-relative -->
     <div class="input-group mb-3 w-100">
-        <span class="input-group-text" bg-light>{{city}} {{pincode}} <i class="bi bi-chevron-down p-4 text-primary cursor fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal"></i></span>
-        <input type="text" class="form-control p-2" placeholder="Search Medicines" name="search" [(ngModel)]="searchText">
-        <span class="input-group-text bg-light p-3 "><i class="bi bi-search"></i><a class="ms-2 text-decoration-none">Search</a></span>
+      <span class="input-group-text" bg-light>{{city}} {{pincode}} <i
+          class="bi bi-chevron-down p-4 text-primary cursor fw-bold" data-bs-toggle="modal"
+          data-bs-target="#exampleModal"></i></span>
+      <input type="text" class="form-control p-2" placeholder="Search Medicines" name="search"
+             [(ngModel)]="searchText" (ngModelChange)="onSearchChange()">
+      <span class="input-group-text bg-light p-3"><i class="bi bi-search"></i></span>
     </div>
-</div>
-
-
-<div class="modal" tabindex="-1" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  
+    <!-- Suggestions Dropdown -->
+    <div *ngIf="suggestions.length > 0" class="suggestions-dropdown">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let suggestion of suggestions" (click)="selectMedicine(suggestion)">
+          {{ suggestion.name }} <!-- Display medicine name -->
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Modal for setting location -->
+  <div class="modal" tabindex="-1" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-body">
-                <h5 class="text-center mb-0 fw-bolder">Set your Location</h5>
-                <div class="mb-3 mt-0">
-                    <label for="id1" class="form-label ms-2 fw-bold">Pincode</label>
-                    <input type="text" class="form-control" id="id1" name="pincode" [(ngModel)]="pincode"(ngModelChange)="serachCityByPincode()">
-                    <label class="form-label ms-2 fw-bold">{{city}}</label>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Submit</button>
-            </div>
+      <div class="modal-content">
+        <div class="modal-body">
+          <h5 class="text-center mb-0 fw-bolder">Set your Location</h5>
+          <div class="mb-3 mt-0">
+            <label for="id1" class="form-label ms-2 fw-bold">Pincode</label>
+            <input type="text" class="form-control" id="id1" name="pincode" [(ngModel)]="pincode"
+                   (ngModelChange)="serachCityByPincode()">
+            <label class="form-label ms-2 fw-bold">{{city}}</label>
+          </div>
         </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+  
+  <div class="container w-75 mt-3 shadow">
+    <img src="https://www.medibuddy.in/assets/banners/medicine-page.webp" alt="">
+  </div>
+  
+  <div class="container mt-5">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-6 d-flex justify-content-end">
+              <img src="https://www.medibuddy.in/assets/banners/otcStore.webp" class="d-block" alt="Image 1"
+                   style="width: 500px; margin-right: 80px;">
+            </div>
+            <div class="col-6 d-flex justify-content-start">
+              <img src="https://www.medibuddy.in/assets/banners/upkarnaWeb.png" class="d-block" alt="Image 2"
+                   style="width: 500px;">
+            </div>
+          </div>
+        </div>
+  
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-6 d-flex justify-content-end">
+              <img src="https://www.medibuddy.in/assets/offers/CallOffer.png" class="d-block" alt="Image 3"
+                   style="width: 500px; margin-right: 80px;">
+            </div>
+            <div class="col-6 d-flex justify-content-start">
+              <img src="https://www.medibuddy.in/assets/offers/discount-home-delivered.png" class="d-block"
+                   alt="Image 4" style="width: 500px;">
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+              data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  

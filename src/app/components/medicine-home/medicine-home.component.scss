@@ -1,3 +1,28 @@
 .cursor{
     cursor: pointer;
 }
+
+.suggestions-dropdown {
+    position: absolute;
+    z-index: 1000;
+    background-color: white; /* Background color for dropdown */
+    border: 1px solid #ced4da; /* Border color */
+    width: calc(100% - 1rem); /* Adjust to match input field */
+    max-height: 200px; /* Maximum height */
+    overflow-y: auto; /* Scroll if too many suggestions */
+  }
+  
+  .suggestions-dropdown ul {
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+  }
+  
+  .suggestions-dropdown li {
+    padding: 8px 12px; /* Padding for each suggestion */
+    cursor: pointer; /* Pointer cursor */
+  }
+  
+  .suggestions-dropdown li:hover {
+    background-color: #f8f9fa; /* Highlight on hover */
+  }

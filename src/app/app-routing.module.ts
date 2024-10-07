@@ -7,7 +7,6 @@ const routes: Routes = [
   {path:'home', component:HomeComponent},
   {path:'medicine-home', component:MedicineHomeComponent},
   {path:'',redirectTo:'/home', pathMatch: 'full'},
-  
 ];
 
 @NgModule({

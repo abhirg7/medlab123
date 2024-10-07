@@ -5,62 +5,65 @@
     font-size: 20px;
     font-weight:700;
 }
-/* Style the container */
 .container {
-    text-align:left; /* Adjust text alignment */
-    margin-top: 50px;   /* Adjust margin as needed */
+    text-align:left; 
+    margin-top: 50px;   
   }
   
   /* Style MedLab */
   .med {
-    color: #375eee; /* Color for MedLab (e.g., orange) */
+    color: #375eee; 
     font-weight: bold;
     font-size: 25px;
   }
   .lab {
-    color: #ff0000; /* Color for MedLab (e.g., orange) */
+    color: #ff0000; 
     font-weight: bold;
     font-size: 25px
   }
   /* Style PLATINUM */
   .platinum {
-    color: #011f46; /* Color for PLATINUM (e.g., blue) */
+    color: #011f46; 
     font-weight: bold;
     font-size: 25px
   }
-  .gradient-text {
+  .care-text  {
     background: linear-gradient(to right,#2196f3, #ff5722); /* Gradient from orange to blue */
     -webkit-background-clip: text; /* Ensures the background gradient clips to the text (for Safari/Chrome) */
     background-clip: text; /* Standard property for other browsers */
     -webkit-text-fill-color: transparent; /* Ensures the text itself is transparent (for Safari/Chrome) */
-    color: transparent; /* Makes the text itself transparent for the gradient to show */
-    font-weight: bold; /* Optional: Makes the text bold */
-    font-size: 36px; /* Optional: Adjust font size for better visibility */
-    display: inline-block; /* Ensure the gradient is clipped properly */
-    font-size: 30;
-    // margin-left: 270px;
-    // display: flex;
-    // justify-content:left;
-    // flex-direction: column;
-  }
-  .buy-button {
-    background-color: #efcf58;; /* Orange color */
-    color: rgb(0, 0, 0); /* Text color */
-    border: none; /* No border */
-    padding: 10px 20px; /* Padding for the button */
-    border-radius: 15px; /* Rounded corners */
-    font-size: 16px; /* Font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth transition */
-    font-size: 30;
-    margin-left: 300px
-  }
-  
-  .buy-button:hover {
-    background-color: #4c3df7; /* Darker orange on hover */
   }
   .row {
-    margin-right: 0; /* Remove right margin */
-    margin-left: 0; /* Remove left margin */
+    margin-right: 0; 
+    margin-left: 0; 
+}
+.care-text {
+  font-size: 2rem; 
+  font-weight: bold;
+  text-align: left;
+}
+
+button {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 30px; 
+}
+.talk-text {
+  font-size: 1.2rem; 
+  font-weight: bold;
+  text-align: left;
+}
+.rounded-video{
+  width: 635px;
+  border-radius: 15px;
+}
+.download-text {
+  font-size: 1.5rem;  /* Adjust the size as needed */
+  font-weight: bold;
+  color: #003063; /* Bootstrap's default link color (blue) */
+  text-decoration: none; /* Remove underline */
+}
+.card{
+  border-radius: 30px;
 }
 
